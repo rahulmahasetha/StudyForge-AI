@@ -111,35 +111,9 @@ npm run dev
 
 ---
 
-## AI Usage
-Honest Disclosure: AI (Google Gemini via an agentic assistant) was used to assist in the planning, architecture diagramming, and scaffolding of this project. 
-- **Planning**: Used AI to structure the 15-phase implementation plan.
-- **Component Ideas**: Used AI to generate the SVG icons and Tailwind utility classes for 3D transforms.
-- **Documentation**: AI assisted in drafting this README and the interview preparation guide.
-*All generated code was thoroughly reviewed, understood, and manually tested to ensure it meets production-ready standards.*
-
----
-
 ## Known Limitations
 - The AI may occasionally return weak or redundant questions depending on the prompt length.
 - Internet connection is strictly required for the Gemini API.
-
----
-
-## Deployment Instructions
-
-### Frontend (Vercel)
-1. Push the repository to GitHub.
-2. Import the project into Vercel.
-3. Set the Root Directory to `client`.
-4. Ensure the build command is `npm run build` and output directory is `dist`.
-5. Add an environment variable in Vercel `VITE_API_URL` pointing to your deployed backend URL (ensure it ends in `/api`).
-
-### Backend (Render)
-1. Create a new Web Service on Render, connected to your GitHub repo.
-2. Set the Root Directory to `server`.
-3. Set the build command to `npm install` and start command to `npm start`.
-4. Add `GEMINI_API_KEY` and `CLIENT_URL` to the Render Environment Variables.
 
 ---
 
