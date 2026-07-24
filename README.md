@@ -11,6 +11,24 @@ StudyForge AI is a modern, responsive, AI-powered study assistant built as a fro
 
 ---
 
+## Screenshots & Demo
+
+[🎥 Watch the Video Walkthrough on Google Drive](https://drive.google.com/file/d/1AZphXwOraDt2ngQzJDTfCAoiIqJ8nz7v/view?usp=drive_link)
+
+| Dashboard | Empty State |
+|:---:|:---:|
+| ![Dashboard](assets/screenshots/dashboard.png) | ![Empty State](assets/screenshots/empty-state.png) |
+
+| AI Thinking | Study Material Ready | Flashcard Review |
+|:---:|:---:|:---:|
+| ![Thinking](assets/screenshots/thinking.png) | ![Summary](assets/screenshots/summary.png) | ![Flashcard](assets/screenshots/flashcard.png) |
+
+| Flashcard Answer | Quiz Question | Quiz Completed |
+|:---:|:---:|:---:|
+| ![Flashcard Answer](assets/screenshots/flashcard-answer.png) | ![Quiz Question](assets/screenshots/quiz.png) | ![Quiz Completed](assets/screenshots/quiz-completed.png) |
+
+---
+
 ## Architecture Diagram
 
 ```mermaid
@@ -105,7 +123,6 @@ Honest Disclosure: AI (Google Gemini via an agentic assistant) was used to assis
 ## Known Limitations
 - The AI may occasionally return weak or redundant questions depending on the prompt length.
 - Internet connection is strictly required for the Gemini API.
-- No authentication or database persistence (refreshing the page clears current state).
 
 ---
 
@@ -116,19 +133,19 @@ Honest Disclosure: AI (Google Gemini via an agentic assistant) was used to assis
 2. Import the project into Vercel.
 3. Set the Root Directory to `client`.
 4. Ensure the build command is `npm run build` and output directory is `dist`.
-5. Add an environment variable in Vercel `VITE_API_URL` pointing to your deployed backend URL.
+5. Add an environment variable in Vercel `VITE_API_URL` pointing to your deployed backend URL (ensure it ends in `/api`).
 
 ### Backend (Render)
 1. Create a new Web Service on Render, connected to your GitHub repo.
 2. Set the Root Directory to `server`.
 3. Set the build command to `npm install` and start command to `npm start`.
-4. Add the `GEMINI_API_KEY` to the Render Environment Variables.
+4. Add `GEMINI_API_KEY` and `CLIENT_URL` to the Render Environment Variables.
 
 ---
 
 ## Future Improvements (Stretch Goals)
+- [x] Local Storage session persistence
 - [ ] Dark Mode toggle
-- [ ] Local Storage session persistence
 - [ ] Export Flashcards as PDF/CSV
 - [ ] Markdown support inside Flashcards
 
