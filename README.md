@@ -111,6 +111,16 @@ npm run dev
 
 ---
 
+## AI-Usage Note (Development)
+In accordance with the assignment guidelines, AI coding assistants (Claude / ChatGPT / Copilot / Cursor) were utilized as productivity and documentation tools during development for:
+- **UI & Animations**: Brainstorming responsive Tailwind CSS styling patterns and 3D card flip transforms for the flashcard component.
+- **Data Validation & Error Handling**: Helping structure robust Zod validation schemas and Express error-handling boilerplate to prevent bad LLM outputs from reaching the client.
+- **Race Condition Handling**: Refining React custom hooks (`useAIRequest`) with `AbortController` design patterns to properly cancel stale network requests and manage loading/error boundaries.
+
+All AI-assisted snippets were carefully reviewed, tested manually, and fully understood before being integrated into the core architecture.
+
+---
+
 ## Known Limitations
 - The AI may occasionally return weak or redundant questions depending on the prompt length.
 - Internet connection is strictly required for the Gemini API.
